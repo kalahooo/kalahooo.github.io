@@ -19,6 +19,11 @@
                 }
             } else {
                 // not IE
+
+                if (window.crypto && !window.crypto.subtle && window.crypto.webkitSubtle) {
+                    window.crypto.subtle = window.crypto.webkitSubtle
+                }
+
                 crypto.subtle.digest("SHA-256", buffer).then(function (hash) {
                    alert(hex(hash))
                 })
