@@ -13,7 +13,7 @@
 
             if (window.msCrypto) {
                 // IE 11
-                const digest = msCrypto.subtle.digest("SHA-256", buffer)
+                const digest = window.msCrypto.subtle.digest("SHA-256", buffer)
                 digest.oncomplete = function (evt) {
                     alert(hex(digest.result))
                 }
@@ -24,7 +24,7 @@
                     window.crypto.subtle = window.crypto.webkitSubtle
                 }
 
-                crypto.subtle.digest("SHA-256", buffer).then(function (hash) {
+                window.crypto.subtle.digest("SHA-256", buffer).then(function (hash) {
                    alert(hex(hash))
                 })
             }
