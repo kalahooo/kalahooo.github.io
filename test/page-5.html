@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Promo</title>
+    <style>
+        
+        :root {
+            --no-color: transparent;
+            --white: rgb(255,255,255);
+            --insurance: rgb(108,207,246);
+            --credit-cards: rgb(255,207,64);
+            --payments: rgb(48,226,158);
+            --debit-cards: rgb(184,237,56);
+            --brockerage: rgb(130,163,194);
+            --deposit: rgb(129,185,240);
+            --misc: rgb(118,152,246);
+            --state-service: rgb(180,231,237);
+            --other: rgb(56,225,225);
+            --credit: rgb(233,226,211);
+        
+        
+            --text-color: rgb(26, 31, 60);
+            --text-color-90-a: rgba(26, 31, 60, .90);
+            --text-color-50-a: rgba(26, 31, 60, .50);
+        
+            --font-family-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+            --font-header: normal 800 20px var(--font-family-stack);
+            --font-section-header-01: normal 800 17px var(--font-family-stack);
+            --font-section-header-02: normal 600 17px var(--font-family-stack);
+            --font-body: normal 500 15px var(--font-family-stack);
+            --font-descripxion: normal 600 15px var(--font-family-stack);
+        
+        }
+    </style>
+    <style>
+        
+        .header-text {
+            font: var(--font-header);
+            color: var(--text-color-90-a);
+            line-height: 1.2;
+        }
+        .section-title-01 {
+            font: var(--font-section-header-01);
+            color: var(--text-color-90-a);
+        }
+        .section-title-02 {
+            font: var(--font-section-header-02);
+            color: var(--text-color-50-a);
+        }
+        
+        .body-text {
+            font: var(--font-body);
+            color: var(--text-color-90-a);
+            line-height: 1.33;
+        }
+        
+        .description-text {
+            font: var(--font-description);
+            color: var(--text-color-50-a);
+            line-height: 1.2;
+        }
+    </style>
+    <style>
+        body {
+            margin: 0;
+        }
+        .main, .section, p {
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* default markdown */
+        
+        ul {
+            list-style-type: disc;
+            margin: 8px 0 0 16px;
+            padding: 0;
+        }
+        
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        strong {
+            color:var(--misc);
+            font-weight: inherit;
+        }
+        /* end of default markdown */
+    </style>
+    <style>
+        .header-wrap {
+            padding: 24px 20px 32px 20px;
+            position: relative;
+        }
+        
+        .header-items-list {
+            list-style-type: none;
+            margin: 0;
+        }
+        
+        .header-title {
+            margin-bottom: 24px;
+        }
+        
+        .header-item {
+            margin-bottom: 16px;
+        }
+        
+        .header-item:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+    <style>
+        .subheader {
+            padding: 40px 20px;
+        }
+        
+        .subheader-title {
+            margin-bottom: 24px;
+        }
+        
+        .subheader-items-list {
+            list-style-type: none;
+            margin: 0;
+        }
+        
+        .subheader-item-wrap {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+        
+        .subheader-item {
+            margin-bottom: 24px;
+        }
+        
+        .subheader-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        
+        .subheader-item-value {
+            margin-left: 12px;
+            width: calc(100% - 48px);
+        }
+        .subheader-item-description {
+            margin-top: 12px;
+        }
+    </style>
+    <style>
+        .summary {
+            padding: 40px 20px;
+        }
+        
+        .summary-title {
+            margin-bottom: 24px;
+        }
+    </style>
+    <style>
+        .marked-description {
+            padding: 40px 20px;
+        }
+        
+        .marked-description-title {
+            margin-bottom: 24px;
+        }
+        
+        .marked-description-items-list {
+            list-style-type: none;
+            margin: 0;
+        }
+        
+        .marked-description-item-wrap {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+        
+        .marked-description-item-wrap svg > path {
+            fill: var(--misc);
+            fill-opacity: 1;
+            opacity: 1;
+        }
+        
+        .marked-description-item {
+            margin-bottom: 24px;
+        }
+        
+        .marked-description-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .marked-description-item-icon-wrap {
+            margin-top: 4px;
+        }
+        .marked-description-item-value {
+            margin-left: 12px;
+            width: calc(100% - 48px);
+        }
+        .marked-description-item-description {
+            margin-top: 12px;
+        }
+    </style>
+    <style>
+        
+        strong {
+            color:var(--misc);
+            font-weight: inherit;
+        }
+        
+        /* icon-description-main */
+        .icon-description-title {
+            margin: 24px 20px 0 20px;
+        }
+        
+        .icon-description-items-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .icon-description-item {
+            margin-top: 32px;
+            padding: 0 20px;
+            display: flex;
+            background-image: linear-gradient(to bottom, #ffffff, #f6f6f6);
+        }
+        
+        .icon-description-item-icon {
+            width: 64px;
+            height: 64px;
+        }
+        .icon-description-item-icon > svg {
+        
+        }
+        
+        
+        
+        .icon-description-item-title {
+            margin: 0 20px 11px 20px;
+        }
+    </style>
+    <style>
+        .numbered-main-items, .numbered-01-items, .numbered-02-items {
+            padding: 32px 20px 20px 20px;
+            background-color: var(--);
+        }
+        
+        .numbered-main-items {
+            background-color: var(--);
+        }
+        
+        .numbered-01-items {
+            background-color: var(--);
+        }
+        
+        .numbered-02-items {
+            background-color: var(--);
+        }
+        
+        
+        .header-text strong {
+            color:var(--misc);
+            font-weight: inherit;
+        }
+        
+        /* numbered-main */
+        .numbered-main-items-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .numbered-main-item {
+            margin-top: 32px;
+        }
+        
+        .numbered-main-item-index {
+            font: var(--font-header);
+            color: var(--white);
+            background-color: var(--misc);
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* end of numbered-main */
+        
+        
+        /* numbered-01 */
+        .numbered-01-items-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+        }
+        
+        .numbered-01-item {
+            margin-bottom: 20px;
+        }
+        
+        .numbered-01-item:last-of-type {
+            margin-bottom: 0;
+        }
+        .numbered-01-item-title-wrap {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .numbered-01-item-index {
+            font: var(--font-header);
+            color: var(--text-color);
+            opacity: .3;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--text-color);
+        }
+        
+        .numbered-01-item-index-text {
+            margin-top: -4px;
+        }
+        
+        .numbered-01-item-title {
+            margin-left: 16px;
+            margin-right: 13px;
+        }
+        
+        /* end of numbered-01 */
+        
+        
+        
+        /* numbered-02 */
+        .numbered-02-items-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+        }
+        
+        .numbered-02-item {
+            margin-bottom: 24px;
+        }
+        
+        .numbered-02-item:last-of-type {
+            margin-bottom: 0;
+        }
+        .numbered-02-item-title-wrap {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .numbered-02-item-index {
+            font: var(--font-header);
+            color: var(--text-color-90-a);
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--text-color-90-a);
+        }
+        .numbered-02-item-index-text {
+            padding: 16px;
+        }
+        .numbered-02-item-title {
+            margin-left: 11px;
+        }
+        
+        .numbered-02-item-text {
+            margin-left: 47px;
+            margin-top: 12px;
+        }
+        
+        /* end of numbered-02 */
+    </style>
+</head>
+<body>
+    <div class="main">
+            <section class="section">
+                
+                <section class="icon-description">
+                    <div class="body-text icon-description-title">«Цели» помогут накопить на желаемую покупку к определенной дате.</div>
+                    <ul class="icon-description-items-list">
+                            <li>
+                                <div class="icon-description-item">
+                                    <div class="icon-description-item-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47" height="43" viewBox="0 0 47 43">
+                                            <defs>
+                                                <path id="a" d="M52.178 40.4a22.867 22.867 0 0 0 2.587-10.6c0-12.685-10.282-22.967-22.966-22.967-12.684 0-22.966 10.282-22.966 22.966 0 3.824.934 7.429 2.587 10.6h4.09a19.342 19.342 0 0 1-3.144-10.6c0-10.732 8.7-19.433 19.433-19.433s19.433 8.7 19.433 19.433c0 3.91-1.155 7.552-3.142 10.6h4.088z"/>
+                                            </defs>
+                                            <g fill="none" fill-rule="evenodd" transform="translate(-8 -6)">
+                                                <path d="M0 0h63.599v63.599H0z"/>
+                                                <use fill="#6CCFF6" xlink:href="#a"/>
+                                                <rect width="45.932" height="3" x="8.833" y="45.699" fill="#545461" rx="1.5"/>
+                                                <text fill="#545461" font-family="SFUIDisplay-Semibold, SF UI Display" font-size="24" font-weight="500">
+                                                    <tspan x="24.733" y="38.882">₽</tspan>
+                                                </text>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="header-text icon-description-item-title">
+                                        Цели - это удобные виртуальные конверты, по которым можно разложить деньги на ваши планы и мечты
+                                        <span class="body-text"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-description-item">
+                                    <div class="icon-description-item-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="44" viewBox="0 0 40 44">
+                                            <g fill="none" fill-rule="evenodd" transform="translate(-12 -10)">
+                                                <path d="M0 0h64v64H0z"/>
+                                                <rect width="37" height="37" x="13.5" y="11.5" stroke="#81B9F0" stroke-width="3" rx="2"/>
+                                                <circle cx="32" cy="30" r="5.5" stroke="#545461" stroke-width="3"/>
+                                                <rect width="3" height="6" x="19.333" y="47.855" fill="#81B9F0" rx="1.5"/>
+                                                <rect width="3" height="6" x="42.444" y="47.855" fill="#81B9F0" rx="1.5"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="header-text icon-description-item-title">
+                                        Для каждой цели мы поможем подобрать вклад, что бы сохранять деньги от инфляции
+                                        <span class="body-text"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-description-item">
+                                    <div class="icon-description-item-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <path d="M-8-13h64v64H-8z"/>
+                                                <g stroke-width="3">
+                                                    <path stroke="#81B9F0" d="M36.37 38.408c.001-.098-.01-.22-.034-.361L34.23 25.832l8.924-8.65c.1-.098.18-.188.237-.266a2.2 2.2 0 0 0-.358-.08l-12.325-1.78-5.513-11.109A2.107 2.107 0 0 0 25 3.624c-.06.08-.127.189-.194.323l-5.513 11.109-12.325 1.78a2.19 2.19 0 0 0-.358.08c.058.078.136.168.238.266l8.923 8.65-2.107 12.215a2.126 2.126 0 0 0-.034.362c.097-.031.215-.08.348-.15L25 32.498l11.022 5.761c.133.07.25.119.349.15zM6.42 17l.002-.004z"/>
+                                                    <path stroke="#545461" d="M39.554 1.605l-1.999 2.78c-.09.125-.066.275.04.353.094.069.222.047.302-.064l1.998-2.78c.09-.125.067-.275-.04-.353-.093-.068-.221-.047-.3.064zM47.029 29.576l-3.234-1.062a.212.212 0 0 0-.282.143.243.243 0 0 0 .157.307l3.234 1.062a.212.212 0 0 0 .282-.143.243.243 0 0 0-.157-.307zM25.156 45.522v-3.438c0-.153-.097-.251-.217-.251-.116 0-.216.103-.216.251v3.438c0 .153.097.25.216.25.117 0 .217-.102.217-.25zM1.795 30.025l3.234-1.062a.238.238 0 0 0 .158-.308.217.217 0 0 0-.282-.142L1.67 29.575a.238.238 0 0 0-.157.307c.04.122.16.183.282.143zM9.553 1.893l1.999 2.781c.082.115.205.135.301.064.104-.076.127-.232.04-.352L9.894 1.605c-.082-.115-.204-.135-.3-.064-.104.076-.128.232-.041.352z"/>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="header-text icon-description-item-title">
+                                        Настройте «Копилку» для автоматического перевода денег с карты на вашу цель
+                                        <span class="body-text"></span>
+                                    </div>
+                                </div>
+                            </li>
+                    </ul>
+                </section>
+            </section>
+            <section class="section">
+                
+                <section class="numbered-01-items">
+                    <div class="section-title-01">Как создать цель:</div>
+                    <ul class="numbered-01-items-list">
+                            <li class="numbered-01-item">
+                                <div class="numbered-01-item-title-wrap">
+                                    <div class="numbered-01-item-index">
+                                        <span class="numbered-01-item-index-text">1</span>
+                                    </div>
+                                    <div class="body-text numbered-01-item-title">
+                                        <span>Укажите название цели, планируемы срок её достижения и сумму</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="numbered-01-item">
+                                <div class="numbered-01-item-title-wrap">
+                                    <div class="numbered-01-item-index">
+                                        <span class="numbered-01-item-index-text">2</span>
+                                    </div>
+                                    <div class="body-text numbered-01-item-title">
+                                        <span>Добавьте к целям изображения, что бы визуализировать ваши желания и </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="numbered-01-item">
+                                <div class="numbered-01-item-title-wrap">
+                                    <div class="numbered-01-item-index">
+                                        <span class="numbered-01-item-index-text">3</span>
+                                    </div>
+                                    <div class="body-text numbered-01-item-title">
+                                        <span>Выберите подходящий вклад для вашей цели</span>
+                                    </div>
+                                </div>
+                            </li>
+                    </ul>
+                </section>
+            </section>
+    </div>
+</body>
+</html>
